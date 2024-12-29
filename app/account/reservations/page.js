@@ -1,4 +1,9 @@
-import ReservationCard from "./ReservationCard";
+import ReservationCard from "@/app/_components/ReservationCard";
+
+export const metadata = {
+  title: "Reservations",
+  description: "Provide your full name, email, and nationality to make your check-in process faster and smoother.",
+}
 
 export default function Page() {
   // CHANGE

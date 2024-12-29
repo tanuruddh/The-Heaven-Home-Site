@@ -1,5 +1,12 @@
 import SelectCountry from "@/app/_components/SelectCountry";
 
+export const metadata = {
+  title: "Update profile",
+  description: "Provide your full name, email, and nationality to make your check-in process faster and smoother.",
+  // image: "/images/the-heaven-home-logo.png",
+  // url: "https://theheavenhome.com/profile",
+}
+
 export default function Page() {
   // CHANGE
   const countryFlag = "pt.jpg";
