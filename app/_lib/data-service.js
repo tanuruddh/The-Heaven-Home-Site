@@ -42,7 +42,7 @@ export async function getCabins() {
   let { data: cabins, error } = await supabase
     .from('cabins')
     .select('*')
-  console.log("gvbhkjhbvcx", cabins);
+  // console.log("gvbhkjhbvcx", cabins);
 
   if (error) {
     console.error(error)
@@ -129,12 +129,15 @@ export async function getBookedDatesByCabinId(cabinId) {
 }
 
 export async function getSettings() {
-  const { data, error } = await supabase.from('settings').select('*').single();
+  const { data, error } = await supabase
+    .from('settings')
+    .select('*');
 
   if (error) {
-    console.error(error);
+    console.error("errororororor", error);
     throw new Error('Settings could not be loaded');
   }
+  console.log("dattttttttttttttt", data);
 
   return data;
 }

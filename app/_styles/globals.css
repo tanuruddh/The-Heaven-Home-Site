@@ -12,6 +12,15 @@
     border-right-color: theme("colors.primary.200");
     animation: rotate 1s infinite linear;
   }
+  .daypicker-custom {
+    display: flex; /* Set the main container to flex */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 16px; /* Add spacing between the two calendars if needed */
+  }
+
+  .daypicker-custom .rdp-month {
+    margin: 0; /* Optional: Adjust spacing if needed */
+  }
 
   .spinner-mini {
     margin: 0;
