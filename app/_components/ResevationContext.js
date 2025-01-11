@@ -9,10 +9,16 @@ function ReservationProvider({ children }) {
         to: undefined
     });
 
+    const resetRange = () => setRange({
+        from: undefined,
+        to: undefined
+    })
+
     return (
         <ReservationContext.Provider value={{
             range,
-            setRange
+            setRange,
+            resetRange
         }}>
             {children}
         </ReservationContext.Provider>

@@ -2,14 +2,14 @@ import { Suspense } from "react";
 import CabinList from "../_components/CabinList";
 import Spinner from "../_components/Spinner";
 import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
 
 export const metadata = {
     title: "Cabins",
 };
 export default async function Page({ searchParams }) {
     // CHANGE
-    const filter = searchParams?.capacity ?? 'all';
-    console.log("par,as", filter);
+    const filter = await (searchParams?.capacity) || 'all';
     return (
         <div>
             <h1 className="text-4xl mb-5 text-accent-400 font-medium">
@@ -28,6 +28,7 @@ export default async function Page({ searchParams }) {
             </div>
             <Suspense fallback={<Spinner />} key={filter}>
                 <CabinList filter={filter} />
+                <ReservationReminder />
             </Suspense>
         </div>
     );

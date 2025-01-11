@@ -7,10 +7,8 @@ import { notFound } from 'next/navigation';
 export async function getCabin(id) {
   const { data, error } = await supabase
     .from('cabins')
-    .select('*')
-    .eq('id', id)
-    .single();
-
+    .select('*').eq('id', id).single();
+  console.log('rhbferwfbhjrfrwjh', data)
   // For testing
   // await new Promise((res) => setTimeout(res, 1000));
 
